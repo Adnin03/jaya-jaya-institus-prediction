@@ -70,7 +70,7 @@ Aplikasi prototype dibuat menggunakan Streamlit. User dapat memasukkan data akad
 streamlit run app.py
 ```
 
-Link streamlit: 
+Link streamlit: https://jaya-jaya-institus-prediction-adnin.streamlit.app/
 
 ## Conclusion
 Berdasarkan analisis Exploratory Data Analysis (EDA) dan Business Dashboard yang telah dibangun, berikut adalah temuan mendalam terkait masalah dropout di Jaya Jaya Institut:
