@@ -72,6 +72,14 @@ with col1:
     
 with col2:
     st.subheader("Hasil Prediksi")
+    
+    sem2_val = input_df['Curricular_units_2nd_sem_approved'].iloc[0]
+    
+    if sem2_val <= 3:
+        st.warning(f"""
+        ⚠️ **Peringatan Zona Merah Akademik!** Mahasiswa meluluskan hanya **{sem2_val} mata kuliah** di Semester 2.  
+        Berdasarkan analisis data, mahasiswa dengan ≤ 3 unit lulus memiliki risiko dropout yang sangat tinggi.""")
+    
     if st.button("Lakukan Prediksi"):
         prediction = model.predict(input_df)
         prediction_proba = model.predict_proba(input_df)

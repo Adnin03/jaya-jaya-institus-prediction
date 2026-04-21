@@ -64,7 +64,7 @@ Dashboard dibuat menggunakan Looker Studio untuk memantau kesehatan akademik mah
 Link Dashboard: https://datastudio.google.com/reporting/18c93fa7-e679-4634-a219-3d73d71c073a
 
 ## Menjalankan Sistem Machine Learning
-Aplikasi prototype dibuat menggunakan Streamlit. User dapat memasukkan data akademik dan finansial mahasiswa untuk mendapatkan prediksi instan.
+Aplikasi prototype dibuat menggunakan Streamlit. User dapat memasukkan data akademik dan finansial mahasiswa untuk mendapatkan prediksi instan. Aplikasi ini dilengkapi dengan fitur Early Warning System yang akan memberikan peringatan otomatis jika mahasiswa masuk ke dalam Zona Merah Akademik (meluluskan <=2 mata kuliah pada Semester 2), sesuai dengan temuan pada tahap EDA.
 **Cara Menajalankan Skrip / Web App (Streamlit):**
 ```bash
 streamlit run app.py
@@ -79,7 +79,7 @@ Berdasarkan analisis Exploratory Data Analysis (EDA) dan Business Dashboard yang
 Karakteristik paling mencolok dari mahasiswa yang melakukan dropout adalah kendala finansial. Mahasiswa yang memiliki status menunggak SPP (Tuition fees up to date = No) memiliki risiko dropout yang sangat ekstrem. Secara visual, hampir seluruh mahasiswa dalam kategori penunggak gagal menyelesaikan studinya, terlepas dari seberapa baik performa akademik mereka di awal semester.
 
 **2. Titik Kritis Akademik di Semester Awal:**
-Terdapat hubungan linear yang kuat antara jumlah mata kuliah yang lulus di semester 1 dengan keberlanjutan studi. Mahasiswa yang lulus kurang dari 3 mata kuliah di semester pertama berada dalam "zona merah". Sebaliknya, mahasiswa yang berhasil mengamankan kelulusan di atas 5 mata kuliah memiliki probabilitas Graduate yang jauh lebih stabil. Hal ini menunjukkan bahwa beban perkuliahan di semester awal menjadi fase adaptasi yang menentukan.
+Analisis korelasi menunjukkan bahwa jumlah mata kuliah yang lulus di semester 2 merupakan prediktor terkuat (korelasi 0.62) terhadap kelulusan. Mahasiswa yang berada di "Zona Merah" (didefinisikan sebagai mahasiswa yang meluluskan <=3 mata kuliah) memiliki risiko dropout yang sangat tinggi. Sebaliknya, mahasiswa yang berhasil meluluskan > 5 mata kuliah memiliki probabilitas Graduate yang jauh lebih stabil. Hal ini menunjukkan bahwa beban perkuliahan di tahun pertama merupakan fase adaptasi yang menentukan.
 
 **3. Pengaruh Dukungan Beasiswa:**
 Dukungan finansial berupa beasiswa terbukti menjadi "jaring pengaman" yang efektif. Rasio dropout pada kelompok bukan penerima beasiswa (Scholarship holder = No) jauh lebih tinggi. Hal ini memperkuat temuan bahwa stabilitas ekonomi berbanding lurus dengan ketenangan mahasiswa dalam menempuh pendidikan hingga lulus.
